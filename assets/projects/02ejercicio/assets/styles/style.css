@@ -1,0 +1,130 @@
+/*Estilos del body*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;                     /*Incluye borde y padding en el ancho alto total*/
+    font-family: "Edu VIC WA NT Hand Pre", cursive;    /*Define fuente base para toda la página*/  
+}
+
+/**/
+/*ESTE ES EL CONTENEDOR PRINCIPAL*/
+/*Sección principal ('hero') de la pag*/
+.hero{  
+    width: 100%;                            /*Ancho del fondo*/
+    min-height: 100vh;                      /*Altuma minima, que será la misma que el ancho*/ 
+    background-image: url(/assets/images/back-image.png); /*Imgen de fondo*/
+
+    /*Damos forma a la imgen de fondo*/
+    background-position: center;            /*Centra la imagen de fondo*/
+    background-size: cover;                 /*Cubre todo elcontenedor con esa imgen*/
+    padding: 10px 10%;                      /**/
+    overflow: hidden;                       /*Oculta cuelquier contenido que sobre salga, es decir, que la mujer no se situe delante de las letras*/
+    position: relative;                     /*Sirve como referencia para elementos posicionados dentro del contenendor*/
+}
+
+/*Barra de navegacion superior*/
+nav{
+    padding: 10 px 0;                       /*Arriba y abajo el espacio será de 10 px*/
+    display: flex;                          /*Para ordenar los botones en linea*/
+    align-items: center;                    /*Centra verticalmente a los hios*/
+    justify-content: space-around;          /*Separa a los hijo al maximo a los extremos*/ 
+}
+
+
+/*Logo dentro del nav*/
+.logo{
+    width: 140px;                           /*Ancho fijo del nav*/
+}
+
+/*Items de la lista*/
+nav ul li{
+    display: inline-block;                  /*Muestra los 'li' de manere horizontal-en linea*/
+    list-style: none;                       /*Elimina viñetas de la lista*/
+    margin: 10px 15px;                      /*Margenes alrededor de cada item*/
+}
+
+/*Enlaces dentro de los items de navegación*/
+nav ul li a{
+    text-decoration: none;                  /*Elimina el subrayado*/
+    color: brown;                          
+    font-weight: 400;                       /*Eliminamos el grosor del borde*/
+}
+
+/*Boton de login*/
+.logn-btn{
+    text-decoration: none;                   /*Sin subrayado*/
+    color: aqua;
+    margin-right: 15px;                     /*Situarlo a la derecha ala distacia de 15px*/
+    font-weight: 400;
+}
+
+/*Botones principales*/
+.btn{
+    display: inline-block;                  /*bloque en linea*/
+    text-decoration: none;                  /*Sin subrayado*/
+    padding: 14px 40px;                     /*Relleno interno vertical de 14px  y horizontal de 40px*/
+    color: coral;
+    background-image: linear-gradient(45deg, #aa4b6b,#6b6b83);    /*Color degradado*/
+    font-size: 14px;
+    border-radius: 35px;    
+    border-top-right-radius:0 ;              /*Lo situamos en la esquina derecha sin redondeo en la forma*/
+    transition: 0.5s;                        /*Transición sueve para cambios*/
+}
+
+/*Contenedor de contenido dentro de .her*/
+.content{
+    margin-top: 0.9%;
+    max-width: 600px;                           /*Ancho maximo de 600px*/
+}
+
+/*Titulo principal de .hero*/
+.content h1{
+    font-size: 70px;
+    color: mediumvioletred;
+}
+
+/*parrafi describtivo dentro de .content*/
+.content p{
+    margin: 10px 0 30px;                        /*Margens 10px arriba, 0 a los lados y 30px abajo*/
+    color: slateblue;
+    animation-delay: 0.5s;                      /*Retraso de 0.5s despeus de la imf, en nuestro caso, saldrá 0.3 seg despues de la foto*/
+}
+
+.content .btn{
+    padding: 15px 80px;                         /*Relleno para destacar*/
+    font-size: 16px;
+    animation-delay: 1s ;                                            
+}
+
+/*Efecto hover - cambia el color al pasar mouse*/
+.btn:hover{
+    border-top-right-radius: 5px;
+    background-image: linear-gradient(45deg, #96538b, #3b8d99, #b20a2c );
+}
+
+/*Imagen destacada dentro de .hero */
+.features-img{
+    width: 300px;
+    position: absolute;                         /*Posicionamiento absoluto respeto a .hero*/
+    bottom: 0;                                  /*Pegada al fondo del contenemos .hero*/
+    right: 10%;                                 /*Separada u 10% del borde derecho*/
+}
+
+/*Variación animada de .feature-img*/
+.features-img.anim{
+    animation-delay: 1.5s;                      /*Retraso de 1.5s antes de empezar la animación*/
+}
+
+.anim{
+    opacity: 0;                                 /*Empieza invisible*/
+    transform: translateY(30px);                /*Desplazo hacia abajo*/
+    animation: moveup 0.5s linear forwards;     /*Ejecuta la imación moveup*/
+}   
+
+/*Definicien de moveup*/
+@keyframes moveup {
+    100% {
+        opacity: 1;                             /*Al moverse hacia arriba termina completamente visible*/
+        transform: translateY(0px);             /*Termina en su posicion original*/
+    }
+}

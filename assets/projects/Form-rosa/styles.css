@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /*background-color: darkgrey; */
+   /* background-image: url(fondo-web5.jpg); */
+   /* background-repeat: no-repeat;          /*Para que la img no se nos repita en el fondo*/
+    /*background-size: cover;                 /*Que cubra todo el fondo*/
+    /*background-position: center;     */       /*Nos centra la img */
+    font-size: 14px;
+    font-family: "Edu NSW ACT Hand Pre", cursive;
+    background-color: #FDF0F0;
+    color: #333;
+}
+
+/*Contenedor principal entrada*/
+.container{
+    width: 80%;                         /*Ocupa el 80% del contenedor*/
+    margin: 50px auto;                  /* Margen superior e inferior de 50px, y eentrado horizontal*/
+    color: #D16BA5;
+}
+
+/*Caja de contacto con fondo blanco y layout en flex*/
+.contact-box{
+    display: flex;                       /*Posicion de todo en una sola linea*/
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #E3E3E3;
+}
+
+
+.contact-left{
+    flex-basis: 60%;                        /*Ocupa el 40% del espacio disponible en el contact box*/
+    padding: 40px;                          /*Relleno interno uniforme al estar en px*/
+    /*background-color:cadetblue;
+    color: beige;*/
+}
+
+.contact-right{
+    flex-basis: 40%;
+    padding: 40px;
+    background: #9297b6 ;
+    color: #fff;
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+/*Parrafos de dentro del contenedor*/
+.container p{
+    margin-bottom: 40px;                    /*Separación inferior de 40px*/
+}
+
+/*Filas de input dispuestas en flex y espaciadas*/
+.input-row{
+    display: flex;
+    justify-content: space-around;        /*Espacio entre elementos*/
+    margin-bottom: 20px;                  /*margen de espacio entre elementos*/
+}
+
+/*Cada grupo de input dentro del .inpt-row
+        Le vamos decir que se situen en el 45% del espacio disponible en el contenedor */
+.input-row .input-group{
+    flex-flow: 45%;                        /*Cada grupo ocupa un 45% del ancho de esa fila*/
+}
+
+/*Estilo generico para los input*/
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid #1b243a;       /*Linea inferior debaj de los cuadros de rellenar cliente*/
+    outline: none;                              /*Sin cortorno al enfocarlo= */
+    padding-bottom:  5px;                       /*Relleno inferior de 5px*/
+}
+
+/*Estilo para textarea*/
+textarea{
+    width: 100%;
+    border: 1px solid 1b243;
+    outline: none;
+    box-sizing: border-box;                     /*Incluye padding y border*/ 
+}
+
+/*Estilos etiquetas*/
+label{
+    margin-bottom: 6px;                         /*Separacion inferior de 6px*/
+    display: block;                             /*Se muestra el bloque para respetar imagenes*/
+    color: #E3E3E3;
+}
+
+/*Vamos a crear un boton mas visual*/
+button{
+    background: #d8deed;
+    border: none;
+    outline: none;                              /*Sin contorno al enfocar el mouse*/
+    color:#67506a;
+    height: 35px;                               /*Altura del botón*/
+    border-radius: 30px;    
+    margin-top: 60px;                           /*En todos los lados del botón*/
+    box-shadow: 0px 5px 1px 0px #350e04;      /*Sombra del botón*/
+    cursor: pointer;                            /*Cambia el cursor al pasar el mouse de flecha a una mano*/
+}
+
+
+/*  Para que pase el mouse pase a ser de otro color el boton*/
+button:hover {
+    background-color: #2a4270;                  
+} 
+
+/*Estilos de los 'h3' dentro del .contact-left*/
+.contact-left h3{
+    columns: #f17ecb ;                         /*Posibles errores ortograficos)*/
+    font-weight: 600px;                         /*Grosor de la fuente*/
+    margin-bottom: 30px;                        /*Margen inferior de 30px*/
+}
+
+tr td:first-child{
+    padding-right: 20px;                        /*Espacio a la derecha para separar la columna*/
+}
+
+tr td{
+    padding-top: 20px;                          /*Espacio de arriba de 20px para separar las filas*/
+}
+/*Estilos de los 'h3' dentro del .contact-left*/

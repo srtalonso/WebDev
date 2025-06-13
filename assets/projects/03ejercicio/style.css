@@ -1,0 +1,47 @@
+*{
+    box-sizing:  border-box; /*Whith y el height  incluyan es padding y el border=> Para que se agrupen todas la imagenes*/
+    margin: 0;
+    padding: 0;
+}
+
+.gallery img {
+    width: 100%; /* Las imageneran al 100% del ancho del contenedor*/
+    max-width: 350px; /*No se pase de los 300px*/
+    height: 300px; /*Altura fija*/
+    object-fit: cover; /* cORTA O ESCALA LA IMAGEN para cubrir todo el contenedor sin deformar */
+    border-radius: 10px; /*Bordes redondeados*/
+}
+
+
+/*Estilos principales de BODY*/
+body{
+    font-family: fantasy; 
+    background-color: #e8c9cf;
+    color: #2d2726;
+}
+
+.header{
+    text-transform: uppercase; /*Convierte el texto en mayusculas*/
+    padding: 32px; /*Es relleno interno de 32 px en cada lado */
+    background-color: #b98b9a ;
+    border-bottom: 4px solid #625345; /*Linea infrior de 4 px color gris*/
+    text-align: center; 
+}
+
+/* VAMOS A ORDEMAR LA GALERIA*/
+.gallery{
+    display: flex; /*Convierte .gallery en contenedor fex, es decir, para poder moverlo*/
+    flex-direction: row; /*Alinea los items en fila (horizontal)*/
+    flex-wrap: wrap;  /*Permite que los items salten a la siguiente fina*/
+    justify-content: center;/*Centra las imagenes horizontalmente*/
+    align-items: center; /* centra las imagenes verticalmente*/ 
+    padding: 20px; /*Relleno speriro e inferor de 20px y los laterales a 10px*/
+    max-width: 1400px; /*Maxima resolución posible*/
+    margin: 0 auto; /* Centra el  div.gallery en la pag de manera automatica*/
+    gap: 16px; /*ESPACIO ENTRE IMAGENES*/
+}
+
+.gallery ::after {
+    content: ""; /*Crea un seudo elemento vacio al final para que quede de manera homogenea*/
+    width: 350px; /*ancho igual al max width de .gallery img para rellenar la ultima fila*/  
+}
